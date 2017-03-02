@@ -2,7 +2,7 @@
 Script extending Bro Notice framework, adding Slack notifications.
 
 ## Usage
-Append to <bron_install>/share/bro/site/local.bro:
+Append to bro_install/share/bro/site/local.bro:
 ```
 @load ./notice_slack.bro
 
