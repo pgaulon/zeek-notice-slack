@@ -53,6 +53,22 @@ function slack_send_notice(webhook: string, payload: Notice::Slack_message)
 function slack_payload(n: Notice::Info, channel: string, username: string, emoji: string): Notice::Slack_message
     {
     local text = fmt("%s: %s", n$note, n$msg);
+    if ( n?$sub )
+        {
+        text = string_cat(text,
+            fmt(" (%s)", n$sub));
+        }
+    if ( n?$id )
+        {
+        text = string_cat(text, ", Connection: ",
+            fmt("%s", n$id$orig_h), ":", fmt("%d", n$id$orig_p), " -> ",
+            fmt("%s", n$id$resp_h), ":", fmt("%d", n$id$resp_p));
+        if ( n?$uid )
+            text = string_cat(text, ", Connection uid: ", n$uid);
+        }
+    else if ( n?$src )
+        text = string_cat(text, fmt(", Source: %s", n$src));
+
     local message: Slack_message = Slack_message($text=text, $channel=channel, $username=username, $icon_emoji=emoji);
     return message;
     }
