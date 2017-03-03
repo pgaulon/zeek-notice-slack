@@ -16,3 +16,6 @@ hook Notice::policy(n: Notice::Info)
     add n$actions[Notice::ACTION_SLACK];
 }
 ```
+## TODO
+- Allow \n in Slack text by changing the pattern in to_json() 
+- ...
