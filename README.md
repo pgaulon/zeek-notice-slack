@@ -17,5 +17,6 @@ hook Notice::policy(n: Notice::Info)
 }
 ```
 ## TODO
-- Allow \n in Slack text by changing the pattern in to_json() 
+- Allow \n in Slack text by changing the pattern in to_json()
+- Add timeout block with Reporter::warning after when block  
 - ...
