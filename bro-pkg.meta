@@ -1,1 +1,3 @@
 [package]
+description = Bro Notices through Slack webhook
+tags = bro plugin, notices, slack webhook
