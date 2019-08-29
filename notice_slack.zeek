@@ -25,7 +25,7 @@ export {
 
     # Can be redefined to add a different public channel, username and emoji
     const slack_channel = "" &redef;
-    const slack_username = "Big Brother" &redef;
+    const slack_username = "Zeek" &redef;
     const slack_emoji = ":eyes:" &redef;
 
     # creates the Slack_message

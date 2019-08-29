@@ -1,0 +1,4 @@
+[package]
+description = Zeek Notices through Slack webhook
+tags = zeek plugin, notices, slack webhook
+aliases = zeek-notice-slack bro-notice-slack
