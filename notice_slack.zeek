@@ -2,7 +2,6 @@
 
 @load base/frameworks/notice
 @load base/utils/active-http
-@load base/utils/json
 
 module Notice;
 
