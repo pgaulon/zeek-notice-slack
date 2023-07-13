@@ -42,7 +42,7 @@ function slack_send_notice(webhook: string, payload: Notice::Slack_message)
         $client_data=to_json(payload)
     );
 
-    when ( local result = ActiveHTTP::request(request) )
+    when [request] ( local result = ActiveHTTP::request(request) )
         {
         if ( result$code != 200 )
             Reporter::warning(fmt("Slack notice received an error status code: %d", result$code));
